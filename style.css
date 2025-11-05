@@ -1,0 +1,359 @@
+/* CSS reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* Container to constrain content width */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Skip link styles */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #9e6f21;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  transition: top 0.2s ease-in-out;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Generic section styling for pages (except hero and map) */
+.container section:not(.hero):not(.map) {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+  padding: 2rem 1rem;
+}
+
+/* Map embed styling */
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Header and navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f3efe0;
+}
+
+header .logo h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li + li {
+  margin-left: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+
+nav a:hover {
+  color: #9e6f21;
+}
+
+nav a.active {
+  color: #9e6f21;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  background-color: #fffbe9;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+}
+
+.hero figure {
+  flex: 1 1 300px;
+  margin: 0;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.hero figcaption {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+.hero-text {
+  flex: 1 1 300px;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  max-width: 35ch;
+}
+
+/* Menu section */
+.menu {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+}
+
+.menu h3 {
+  margin-bottom: 1rem;
+}
+
+.menu ul {
+  list-style: disc inside;
+}
+
+.menu li {
+  margin-bottom: 0.5rem;
+}
+
+/* Gallery section */
+.gallery {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+}
+
+.gallery h3 {
+  margin-bottom: 1rem;
+}
+
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  /* Keep consistent aspect ratio across all images */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery figcaption {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+/* Opening hours table */
+.hours {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+thead {
+  background-color: #f3efe0;
+}
+
+/* Quote aside */
+.quote {
+  padding: 1rem;
+  font-style: italic;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f3efe0;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+/* Decorative pseudo-element for the footer */
+footer::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #ccc;
+  margin: 0 auto 1rem auto;
+}
+
+/* About page */
+.about {
+  padding: 2rem 1rem;
+}
+
+.about figure {
+  margin: 1rem 0;
+}
+
+.about img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.about dl dt {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.about dl dd {
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+/* Contact page */
+.contact-info,
+.contact-form {
+  padding: 2rem 1rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 500px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 0.7rem;
+  background-color: #9e6f21;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.contact-form button:hover {
+  background-color: #7a5518;
+}
+
+/* Pseudo-class examples */
+.menu li:first-child {
+  font-style: italic;
+}
+
+.gallery .grid figure:nth-child(odd) {
+  opacity: 0.95;
+}
+
+/* Responsive design: tablet */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav li + li {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  .hero {
+    flex-direction: column;
+  }
+}
+
+/* Responsive design: mobile */
+@media (max-width: 600px) {
+  .gallery .grid {
+    grid-template-columns: 1fr;
+  }
+  header .logo h1 {
+    font-size: 1.2rem;
+  }
+  nav a {
+    font-size: 0.8rem;
+  }
+}
