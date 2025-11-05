@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover our full menu of coffees, teas, pastries and snacks." />
+    <meta name="keywords" content="menu, coffee, tea, pastries, snacks" />
+    <meta name="author" content="Marnix de Jong" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Menu – Café del Mar</title>
+  </head>
+
+  <body>
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
+    <header>
+      <h1>Café del&nbsp;Mar</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="maincontent" class="container">
+      <section class="menu-page">
+        <h2>Our Menu</h2>
+        <p>Explore our selection of specialty coffees, teas, pastries and light bites. Everything is prepared fresh daily with the finest ingredients.</p>
+        <table class="menu-table">
+          <thead>
+            <tr><th scope="col">Item</th><th scope="col">Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><th class="category" colspan="2">Coffee</th></tr>
+            <tr><td>Espresso</td><td class="item-price">€2,20</td></tr>
+            <tr><td>Americano</td><td class="item-price">€2,50</td></tr>
+            <tr><td>Cappuccino</td><td class="item-price">€3,00</td></tr>
+            <tr><td>Flat White</td><td class="item-price">€3,30</td></tr>
+            <tr><td>Caffè Latte</td><td class="item-price">€3,20</td></tr>
+            <tr><th class="category" colspan="2">Teas &amp; Other Drinks</th></tr>
+            <tr><td>English Breakfast Tea</td><td class="item-price">€2,00</td></tr>
+            <tr><td>Green Tea</td><td class="item-price">€2,10</td></tr>
+            <tr><td>Herbal Infusion</td><td class="item-price">€2,30</td></tr>
+            <tr><td>Chai Latte</td><td class="item-price">€3,00</td></tr>
+            <tr><td>Hot Chocolate</td><td class="item-price">€3,20</td></tr>
+            <tr><th class="category" colspan="2">Pastries &amp; Snacks</th></tr>
+            <tr><td>Croissant</td><td class="item-price">€2,50</td></tr>
+            <tr><td>Chocolate Brownie</td><td class="item-price">€2,80</td></tr>
+            <tr><td>Lemon Cake</td><td class="item-price">€2,60</td></tr>
+            <tr><td>Ham &amp; Cheese Sandwich</td><td class="item-price">€4,00</td></tr>
+            <tr><td>Spinach &amp; Feta Quiche</td><td class="item-price">€4,20</td></tr>
+          </tbody>
+        </table>
+        <p class="disclaimer"><em>All items are subject to availability. Please ask our staff about vegan and gluten‑free options.</em></p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Café del&nbsp;Mar. All rights reserved.</p>
+    </footer>
+
+    <!-- Cookie notice overlay (semantic element kept once) -->
+    <aside class="cookie" role="region" aria-label="Cookie notice">
+      We use cookies to improve your experience.
+      <button type="button" aria-label="Close">OK</button>
+    </aside>
+
+    <script>
+      // hide cookie notice when clicking ok
+      document.addEventListener('DOMContentLoaded', function () {
+        var cookie = document.querySelector('.cookie')
+        var btn = cookie.querySelector('button')
+        
+        if (localStorage.getItem('cookieHidden') === 'yes') {
+          cookie.style.display = 'none'
+        }
+        
+        btn.addEventListener('click', function () {
+          cookie.style.display = 'none'
+          localStorage.setItem('cookieHidden', 'yes')
+        })
+      })
+    </script>
+    
+  </body>
+</html>
