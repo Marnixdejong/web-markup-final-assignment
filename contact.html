@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get in touch with us at Café del Mar. We would love to hear from you!" />
+    <meta name="keywords" content="contact, cafe, email, message" />
+    <meta name="author" content="Marnix de Jong" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Contact – Café del Mar</title>
+  </head>
+
+  <body>
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
+    <header>
+      <h1>Café del&nbsp;Mar</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="maincontent" class="container">
+      <section class="contact-info">
+        <h2>Contact Us</h2>
+        <p>We’re located at Prinsengracht 123, 1015 AB Amsterdam. Feel free to drop by or send us a message using the form below.</p>
+        <address>
+          <p><strong>Phone:</strong> 020 - 123 4567</p>
+          <p><strong>Email:</strong> <a href="mailto:info@cafedelmar.nl">info@cafedelmar.nl</a></p>
+        </address>
+      </section>
+      <section class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Contact form</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" autocomplete="off" required></textarea>
+            <button type="submit">Submit</button>
+            <input type="submit" value="Submit" class="duplicate-submit" aria-hidden="true" tabindex="-1">
+          </fieldset>
+        </form>
+      </section>
+      <section class="map">
+        <h3>Find Us on the Map</h3>
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=4.8821%2C52.3758%2C4.8861%2C52.3798&layer=mapnik&marker=52.3778%2C4.8841"
+          title="Map showing the location of Café del Mar in Amsterdam"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <p class="map-caption">
+          <a href="https://www.openstreetmap.org/?mlat=52.3778&amp;mlon=4.8841#map=17/52.3778/4.8841" target="_blank" rel="noopener">View larger map</a>
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Café del&nbsp;Mar. All rights reserved.</p>
+    </footer>
+
+    <aside class="cookie" role="region" aria-label="Cookie notice">
+      We use cookies to improve your experience.
+      <button type="button" aria-label="Close">OK</button>
+    </aside>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var cookie = document.querySelector('.cookie')
+        var btn = cookie.querySelector('button')
+        
+        if (localStorage.getItem('cookieHidden') === 'yes') {
+          cookie.style.display = 'none'
+        }
+        
+        btn.addEventListener('click', function () {
+          cookie.style.display = 'none'
+          localStorage.setItem('cookieHidden', 'yes')
+        })
+      })
+    </script>
+    
+  </body>
+</html>

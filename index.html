@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome to Café del Mar, a cosy local coffee shop serving fresh brews and pastries." />
+    <meta name="keywords" content="cafe, coffee, local, pastries, neighbourhood" />
+    <meta name="author" content="Marnix de Jong" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Café del Mar – Home</title>
+  </head>
+
+  <body>
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
+    <header>
+      <h1>Café del&nbsp;Mar</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="maincontent" class="container">
+      <section class="hero">
+        <figure>
+          <img
+            src="img/HeroCoffee.png"
+            alt="Steaming hot cup of coffee in a saucer"
+            title="Steaming coffee"
+            width="1200"
+            height="800"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Your daily dose of warmth</figcaption>
+        </figure>
+        <article>
+          <h2>Fresh brews &amp; baked goods</h2>
+          <p>Relax in our cosy corner on the canal. We serve a variety of coffees, teas and delicious treats from early morning until late afternoon.</p>
+        </article>
+      </section>
+
+      <section class="index-favourites">
+        <h3>Our Favourites</h3>
+        <ul>
+          <li><strong>Espresso</strong> – Classic and bold shot of caffeine.</li>
+          <li><strong>Cappuccino</strong> – Espresso with steamed milk and foam.</li>
+          <li><strong>Herbal Tea</strong> – A soothing blend of herbs and spices.</li>
+          <li><strong>Croissant</strong> – Flaky buttery pastry, baked fresh daily.</li>
+          <li><strong>Chocolate Brownie</strong> – Rich and gooey, perfect with coffee.</li>
+        </ul>
+      </section>
+
+      <section class="gallery">
+        <h3>Gallery</h3>
+        <ul class="grid-gallery">
+          <li>
+            <figure>
+              <img
+                src="img/Latteart.png"
+                alt="Close‑up of a cappuccino with a tulip latte art pattern, pastry in the background."
+                title="Latte art"
+                width="1200"
+                height="800"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Latte art made with love</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="img/Croissants.png"
+                alt="Freshly baked croissants on a baking tray."
+                title="Fresh croissants"
+                width="1200"
+                height="800"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Freshly baked croissants</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="img/terrace.png"
+                alt="Cosy outdoor terrace with string lights, plants, and small café tables."
+                title="Outdoor terrace"
+                width="1200"
+                height="800"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Our cosy terrace on sunny days</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="img/CoffeeBeans.png"
+                alt="Roasted coffee beans in a burlap sack or container."
+                title="Roasted coffee beans"
+                width="1200"
+                height="800"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>We roast our own beans</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+
+      <section class="hours">
+        <h3>Opening Hours</h3>
+        <table>
+          <caption>Our weekly opening and closing times</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Open</th>
+              <th scope="col">Close</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Monday</td><td>08:00</td><td>17:00</td></tr>
+            <tr><td>Tuesday</td><td>08:00</td><td>17:00</td></tr>
+            <tr><td>Wednesday</td><td>08:00</td><td>17:00</td></tr>
+            <tr><td>Thursday</td><td>08:00</td><td>19:00</td></tr>
+            <tr><td>Friday</td><td>08:00</td><td>19:00</td></tr>
+            <tr><td>Saturday</td><td>09:00</td><td>18:00</td></tr>
+            <tr><td>Sunday</td><td>09:00</td><td>16:00</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <aside class="quote">
+      <p>"Coffee is a language in itself" – Jackie Chan</p>
+    </aside>
+
+    <footer>
+      <p>&copy; 2025 Café del&nbsp;Mar. All rights reserved.</p>
+    </footer>
+
+    <aside class="cookie" role="region" aria-label="Cookie notice">
+      We use cookies to improve your experience.
+      <button type="button" aria-label="Close">OK</button>
+    </aside>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var cookie = document.querySelector('.cookie')
+        var btn = cookie.querySelector('button')
+        
+        if (localStorage.getItem('cookieHidden') === 'yes') {
+          cookie.style.display = 'none'
+        }
+        
+        btn.addEventListener('click', function () {
+          cookie.style.display = 'none'
+          localStorage.setItem('cookieHidden', 'yes')
+        })
+      })
+    </script>
+
+  </body>
+</html>
