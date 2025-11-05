@@ -1,5 +1,5 @@
 Student name: Marnix de Jong
-Student number: [Vul hier je studentnummer in]
-Student class: [Vul hier je klas in]
+Student number: 684885
+Student class: HAINF25VT1A
 GitHub Repository: https://github.com/Marnixdejong/web-markup-final-assignment
 GitHub Pages URL: https://marnixdejong.github.io/web-markup-final-assignment
